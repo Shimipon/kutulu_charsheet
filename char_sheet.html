@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<head>
+    <title>キャラシ保存</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        window.onload = function(){
+            $('#EthButton0').click(function(){
+                setMjrVal(0,'#InputEth')
+            });
+            $('#EthButton1').click(function(){
+                setMjrVal(1,'#InputEth')
+            });
+            $('#EthButton2').click(function(){
+                setMjrVal(2,'#InputEth')
+            });
+            $('#EthButton3').click(function(){
+                setMjrVal(3,'#InputEth')
+            });
+        };
+        function setMjrVal(level,label){
+            $(label).val(level)
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="">キャラシ保存用サイト</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+        <div>
+            <form action="" method="post">
+                <div class="row align-items-center mb-4">
+                    <div class="col-auto">
+                        <label for="InputCharaName" class="form-label">名前</label>
+                        <input type="text" class="form-control" id="InputCharaName" placeholder="ミ＝ゴ" name=char_name>
+                    </div>
+                    <div class="col-auto">
+                        <label for="InputUserName" class="form-label">ユーザーID</label>
+                        <input type="text" class="form-control" id="InputUserName" name=user_id>
+                    </div>
+                </div>
+                <div class="row align-items-center mb-4">
+                    <div class="col-auto">
+                        <label for="InputProfession" class="form-label">職業</label>
+                        <input type="text" class="form-control"  placeholder="プログラマー" id="InputProfession" name=char_profession>
+                    </div>
+                    <div class="col-auto">
+                        <label for="InputCharGender" class="form-label">性別</label>
+                        <input type="text" class="form-control" placeholder="" id="InputCharGender" name=char_gender>
+                    </div>
+                    <div class="col-auto">
+                        <label for="InputCharFrom"  class="form-label">出身</label>
+                        <input type="text" class="form-control" placeholder="神奈川" id="InputCharFrom" name=char_from>
+                    </div>
+                </div>
+                <div class="row align-items-center mb-4">
+                    <div class="col-auto">
+                        <label for="InputCharHeight" class="form-label">身長</label>
+                        <input type="text" class="form-control" placeholder="165" id="InputCharHeight" name=char_height>
+                    </div>
+                    <div class="col-auto">
+                        <label for="InputCharWeight" class="form-label">体重</label>
+                        <input type="text" class="form-control" placeholder="55" id="InputCharWeight" name=char_weight>
+                    </div>
+                    <div class="col-auto">
+                        <label for="InputCharAge"  class="form-label">年齢</label>
+                        <input type="text" class="form-control" placeholder="35" id="InputCharAge" name=char_age>
+                    </div>
+                </div>
+                <div class="row align-items-center mb-4">
+                    <div class="col-auto">
+                        <label for="InputCharEye" class="form-label">目の色</label>
+                        <input type="text" class="form-control" placeholder="黒" id="InputCharEye" name=char_eye>
+                    </div>
+                    <div class="col-auto">
+                        <label for="InputCharSkin" class="form-label">肌の色</label>
+                        <input type="text" class="form-control" placeholder="ペールオレンジ" id="InputCharSkin" name=char_skin>
+                    </div>
+                    <div class="col-auto">
+                        <label for="InputCharHair"  class="form-label">髪の色</label>
+                        <input type="text" class="form-control" placeholder="黒" id="InputCharHair" name=char_hair>
+                    </div>
+                </div>
+                <div class="row align-items-center mb-4">
+                    <div class="col-auto">
+                        <label for="InputCharEye" class="form-label">階級</label>
+                        <input type="text" class="form-control" id="InputCharEye" name=char_eye>
+                    </div>
+                    <div class="col-auto">
+                        <label for="InputCharSkin" class="form-label">家柄</label>
+                        <input type="text" class="form-control" id="InputCharSkin" name=char_skin>
+                    </div>
+                    <div class="col-auto">
+                        <label for="InputCharHair"  class="form-label">称号／肩書</label>
+                        <input type="text" class="form-control" id="InputCharHair" name=char_hair>
+                    </div>
+                </div>
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">名声</th>
+                            <th scope="col">弁舌</th>
+                            <th scope="col">信用</th>
+                            <th scope="col">価格</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th style="white-space: nowrap;" scope="row">能力値</th>
+                            <td><input type="text" inputmode="numeric" class="form-control"  name="str_start" value="0"></td>
+                            <td><input type="text" inputmode="numeric" class="form-control"  name="con_start" value="0"></td>
+                            <td><input type="text" inputmode="numeric" class="form-control"  name="pow_start" value="0"></td>
+                            <td><input type="text" inputmode="numeric" class="form-control"  name="dex_start" value="0"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">射撃</th>
+                            <th scope="col">白兵</th>
+                            <th scope="col">隠密</th>
+                            <th scope="col">敏捷</th>
+                            <th scope="col">筋力</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th style="white-space: nowrap;" scope="row">能力値</th>
+                            <td><input type="text" inputmode="numeric" class="form-control"  name="str_start" value="0"></td>
+                            <td><input type="text" inputmode="numeric" class="form-control"  name="con_start" value="0"></td>
+                            <td><input type="text" inputmode="numeric" class="form-control"  name="pow_start" value="0"></td>
+                            <td><input type="text" inputmode="numeric" class="form-control"  name="dex_start" value="0"></td>
+                            <td><input type="text" inputmode="numeric" class="form-control"  name="dex_start" value="0"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="row align-items-center">
+                    <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">専門分野</th>
+                            <th scope="col">レベル</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th style="white-space: nowrap;" scope="row">人類学＆民族学</th>
+                            <td><input type="text" inputmode="numeric" id="InputEth" name="mjr-in-eth" value="0">
+                                <button type="button" class="btn btn-light" id="EthButton0">0</button>
+                                <button type="button" class="btn btn-light" id="EthButton1">1</button>
+                                <button type="button" class="btn btn-light" id="EthButton2">2</button>
+                                <button type="button" class="btn btn-light" id="EthButton3">3</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="white-space: nowrap;" scope="row">考古学＆歴史学</th>
+                            <td><input type="text" inputmode="numeric" id="InputHis" name="mjr-in-his" value="0">
+                                <button type="button" class="btn btn-light" id="HisButton0">0</button>
+                                <button type="button" class="btn btn-light" id="HisButton1">1</button>
+                                <button type="button" class="btn btn-light" id="HisButton2">2</button>
+                                <button type="button" class="btn btn-light" id="HisButton3">3</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="white-space: nowrap;" scope="row">図書館＆古文書学</th>
+                            <td><input type="text" inputmode="numeric" id="InputLib" name="mjr-in-lib" value="0">
+                                <button type="button" class="btn btn-light" id="LibButton0">0</button>
+                                <button type="button" class="btn btn-light" id="LibButton1">1</button>
+                                <button type="button" class="btn btn-light" id="LibButton2">2</button>
+                                <button type="button" class="btn btn-light" id="LibButton3">3</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="white-space: nowrap;" scope="row">経済学＆法学</th>
+                            <td><input type="text" inputmode="numeric" id="InputEco" name="mjr-in-eco" value="0">
+                                <button type="button" class="btn btn-light" id="EcoButton0">0</button>
+                                <button type="button" class="btn btn-light" id="EcoButton1">1</button>
+                                <button type="button" class="btn btn-light" id="EcoButton2">2</button>
+                                <button type="button" class="btn btn-light" id="EcoButton3">3</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="white-space: nowrap;" scope="row">芸術＆工芸</th>
+                            <td><input type="text" inputmode="numeric" id="InputArt" name="mjr-in-art" value="0">
+                                <button type="button" class="btn btn-light" id="ArtButton0">0</button>
+                                <button type="button" class="btn btn-light" id="ArtButton1">1</button>
+                                <button type="button" class="btn btn-light" id="ArtButton2">2</button>
+                                <button type="button" class="btn btn-light" id="ArtButton3">3</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="white-space: nowrap;" scope="row">犯罪学</th>
+                            <td><input type="text" inputmode="numeric" id="InputCri" name="mjr-in-cri" value="0">
+                                <button type="button" class="btn btn-light" id="CriButton0">0</button>
+                                <button type="button" class="btn btn-light" id="CriButton1">1</button>
+                                <button type="button" class="btn btn-light" id="CriButton2">2</button>
+                                <button type="button" class="btn btn-light" id="CriButton3">3</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="white-space: nowrap;" scope="row">医学</th>
+                            <td><input type="text" inputmode="numeric" id="InputMed" name="mjr-in-med" value="0">
+                                <button type="button" class="btn btn-light" id="MedButton0">0</button>
+                                <button type="button" class="btn btn-light" id="MedButton1">1</button>
+                                <button type="button" class="btn btn-light" id="MedButton2">2</button>
+                                <button type="button" class="btn btn-light" id="MedButton3">3</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="white-space: nowrap;" scope="row">機械工学</th>
+                            <td><input type="text" inputmode="numeric" id="InputMac" name="mjr-in-mac" value="0">
+                                <button type="button" class="btn btn-light" id="MacButton0">0</button>
+                                <button type="button" class="btn btn-light" id="MacButton1">1</button>
+                                <button type="button" class="btn btn-light" id="MacButton2">2</button>
+                                <button type="button" class="btn btn-light" id="MacButton3">3</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="white-space: nowrap;" scope="row">自然科学</th>
+                            <td><input type="text" inputmode="numeric" id="InputNat" name="mjr-in-nat" value="0">
+                                <button type="button" class="btn btn-light" id="NatButton0">0</button>
+                                <button type="button" class="btn btn-light" id="NatButton1">1</button>
+                                <button type="button" class="btn btn-light" id="NatButton2">2</button>
+                                <button type="button" class="btn btn-light" id="NatButton3">3</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="white-space: nowrap;" scope="row">オカルト</th>
+                            <td><input type="text" inputmode="numeric" id="InputOcc" name="mjr-in-occ" value="0">
+                                <button type="button" class="btn btn-light" id="OccButton0">0</button>
+                                <button type="button" class="btn btn-light" id="OccButton1">1</button>
+                                <button type="button" class="btn btn-light" id="OccButton2">2</button>
+                                <button type="button" class="btn btn-light" id="OccButton3">3</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="white-space: nowrap;" scope="row">心理学</th>
+                            <td><input type="text" inputmode="numeric" id="InputPsy" name="mjr-in-psy" value="0">
+                                <button type="button" class="btn btn-light" id="PsyButton0">0</button>
+                                <button type="button" class="btn btn-light" id="PsyButton1">1</button>
+                                <button type="button" class="btn btn-light" id="PsyButton2">2</button>
+                                <button type="button" class="btn btn-light" id="PsyButton3">3</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="white-space: nowrap;" scope="row">言語学</th>
+                            <td><input type="text" inputmode="numeric" id="InputLin" name="mjr-in-lin" value="0">
+                                <button type="button" class="btn btn-light" id="LinButton0">0</button>
+                                <button type="button" class="btn btn-light" id="LinButton1">1</button>
+                                <button type="button" class="btn btn-light" id="LinButton2">2</button>
+                                <button type="button" class="btn btn-light" id="LinButton3">3</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="row align-item-center">
+                    <div class="col-auto">
+                        <label for="InputCharText"  class="form-label">メモ</label>
+                    </div>
+                </div>
+                <div class="row align-item-center">
+                    <textarea class="form-control" placeholder="キャラクターのメモ" value="" id="InputCharText" rows="7" name=char_text></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">保存</button>
+            </form>
+        </div>
+    </div>
+</body>
